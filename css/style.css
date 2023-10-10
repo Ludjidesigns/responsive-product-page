@@ -1,5 +1,11 @@
 :root {
-
+  --font-size-sm: clamp(0.8rem, 0.17vw + 0.76rem, 0.89rem);
+  --font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
+  --font-size-md: clamp(1.25rem, 0.61vw + 1.1rem, 1.58rem);
+  --font-size-lg: clamp(1.56rem, 1vw + 1.31rem, 2.11rem);
+  --font-size-xl: clamp(1.95rem, 1.56vw + 1.56rem, 2.81rem);
+  --font-size-xxl: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
+  --font-size-xxxl: clamp(3.05rem, 3.54vw + 2.17rem, 5rem);
 }
 
 * {
@@ -18,16 +24,118 @@ html {
   color: #222;
   scroll-behavior: smooth;
   line-height: 1.4;
+  
 }
 
 body {
   margin: 0;
+  line-height: 1.5;
+  font-family: "Nunito", sans-serif;
+  color: black;
 }
 
 img {
   display: block;
   max-width: 100%;
+  align-self: start;
 }
 
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1em;
+  margin: 20px;
+  padding: 1px;
+}
 
+#cookies {
+  grid-column: 1 / 4;
+}
+
+.photos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
+  margin-top: 2.5em;
+  margin-bottom: 2.5em;
+}
+
+@media (min-width: 38em){
+  
+
+  .grid {
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: repeat(1fr, 1fr)
+  }
+
+  #cookies {
+    grid-column: 1 / 2;
+  }
+
+  .photos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 60em){
+  .photos {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+}
+
+header > div {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  padding: 1.5em;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+nav ul li {
+  padding-left: 1.125em;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 2em;
+}
+
+nav ul li a:link,
+nav ul li a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+.add-to-cart-button {
+	width: 7%;
+	font-weight: 700;
+	display: inline-block;
+	text-decoration: none;
+	padding: .45em 0;
+	margin: 0 auto 2em;
+}
+
+.add-to-cart-button {
+	color: #fff;
+	background-color: black;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.add-to-cart-button:hover {
+  background-color: white;
+  border-radius: 5px;
+  color: black;
+ }
+
+footer {
+  text-align:center;
+}
 
