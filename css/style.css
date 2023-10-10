@@ -142,7 +142,7 @@ padding: 3em;
     text-align: center;
     }
 
-  #try-it-with h3, p {
+  #try-it-with h3 {
     text-align: center;
     }
 
@@ -170,6 +170,5 @@ padding: 3em;
 
 footer {
   text-align:center;
-  padding: .45em 0;
 }
 
