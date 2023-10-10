@@ -66,17 +66,26 @@ header > div {
   margin-bottom: 2.5em;
 }
 
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1em;
+}
+
+.grid #cookies {
+  grid-column: 1 / 4;
+}
+
 @media (min-width: 38em){
   
-
   .grid {
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: repeat(1fr, 1fr)
+    grid-template-columns: 1fr 1fr;
   }
-
-  #cookies {
+  
+  .grid #cookies {
     grid-column: 1 / 2;
   }
+}
 
   .photos {
     grid-template-columns: repeat(2, 1fr);
@@ -86,7 +95,6 @@ header > div {
 display: grid;
 grid-template-columns: repeat(3, 1fr);
   }
-}
 
 @media (min-width: 60em){
   .photos {
@@ -127,6 +135,16 @@ padding: 3em;
 #what-people-are-saying h3 {
   text-align: center;
   }
+
+  #behind-the-dough {
+    flex-direction: inherit;
+    padding: 3em;
+    text-align: center;
+    }
+
+  #try-it-with h3, p {
+    text-align: center;
+    }
 
 .add-to-cart-button {
 	width: 7%;
